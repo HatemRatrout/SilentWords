@@ -1,9 +1,9 @@
-const UserController = require("../controllers/word.controller");
+const WordController = require("../controllers/word.controller");
 
 module.exports = app => {
-  app.get("/words/", UserController.findAllUsers);
-  app.get("/words/:id", UserController.findOneSingleUser);
-  app.put("/words/update/:id", UserController.updateExistingUser);
-  app.post("/words/new", UserController.createNewUser);
-  app.delete("/words/delete/:id", UserController.deleteAnExistingUser);
+  app.get("/words/", WordController.findAll);
+  app.get("/words/:id", WordController.findById);
+  app.put("/words/update/:id", WordController.update);
+  app.post("/words/new", WordController.create);
+  app.delete("/words/delete/:id", WordController.delete);
 };
