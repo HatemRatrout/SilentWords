@@ -4,7 +4,12 @@ const app = express();
 const port = 8000;
 require("./server/config/mongoose.config");
 
-app.use(express.json(), express.urlencoded({ extended: true }));
+
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
 
 require("./server/routes/word.routes")(app);
 
