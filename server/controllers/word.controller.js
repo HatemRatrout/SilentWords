@@ -1,10 +1,18 @@
 const Words = require("../models/word.model");
+const Item = require("../models/item.model");
+const Question = require("../models/Question.model");
 const { json } = require("express");
 
 
 module.exports.findAll = (req, res)=>{
   Words.find({})
         .then(words => res.json(words))
+        .catch(err => res.json(err));
+}
+
+module.exports.findAllItems = (req, res)=>{
+        Item.find({})
+        .then(items => res.json(items))
         .catch(err => res.json(err));
 }
 
@@ -15,9 +23,31 @@ module.exports.findById =(req, res)=>{
 }
 
 module.exports.create = (req, res) =>{
-    const {name, position} = req.body;
-    Words.create({name, position})
+    const {category , picture} = req.body;
+    Words.create({category , picture})
         .then(word => res.json(word))
+        .catch(err => res.status(400).json(err));
+}
+
+module.exports.createQuestion = (req, res) =>{
+    const {question , answers , correct} = req.body;
+    Question.create({question , answers , correct})
+        .then(que => res.json(que))
+        .catch(err => res.status(400).json(err));
+}
+
+
+module.exports.createItem = (req, res) =>{
+    const {picture} = req.body;
+    Item.create({picture})
+    .then( item => {
+        Words.findOneAndUpdate({'_id': req.params.id},{ 
+            $push:{ Items : item }
+         })
+         res.json(item)
+         .catch(err => res.status(400).json(err));
+        
+    })
         .catch(err => res.status(400).json(err));
 }
 

@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.back{
+  backdrop-filter: blur(15px);
+}
+.Logo {
+  background-image: url(./sign.jpg);
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,5 +44,3 @@
     transform: rotate(360deg);
   }
 }
-
-

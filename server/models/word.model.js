@@ -1,9 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose");Schema = mongoose.Schema;
 
 const wordSchema = new mongoose.Schema({
-	name: String,
-	
+	title : String ,
+	picture : String,
+	Items :[{ type: Schema.Types.ObjectId, ref: 'Item' }]
 });
 
-const word = mongoose.model("Word", wordSchema);
+const word = mongoose.model("Words", wordSchema);
 module.exports = word;
