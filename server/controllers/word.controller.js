@@ -23,8 +23,8 @@ module.exports.findById =(req, res)=>{
 }
 
 module.exports.create = (req, res) =>{
-    const {category , picture} = req.body;
-    Words.create({category , picture})
+    const { picture} = req.body;
+    Words.create({ picture})
         .then(word => res.json(word))
         .catch(err => res.status(400).json(err));
 }
@@ -45,8 +45,7 @@ module.exports.createItem = (req, res) =>{
             $push:{ Items : item }
          })
          res.json(item)
-         .catch(err => res.status(400).json(err));
-        
+         .catch(err => res.status(400).json(err));  
     })
         .catch(err => res.status(400).json(err));
 }

@@ -1,11 +1,11 @@
-// import React from 'react';
-// // import "../style.css";
+import React from 'react';
+// import "../style.css";
   
-// const Result = ({score, playAgain}) => (
-//   <div className="score-board">
-//     <div className="score"> Your score is {score} / 5 correct answer ! ! ! </div>
-//     <button className="playBtn" onClick={playAgain} > Play Again </button>
-//   </div>
-// )
+const Result = ({score, playAgain}) => (
+  <div className="score-board">
+    <div className="score"> Your score is {score} / 5 correct answer ! ! ! </div>
+    <button className="playBtn" onClick={playAgain} > Play Again </button>
+  </div>
+)
   
-// export default Result;
+export default Result;

@@ -8,9 +8,9 @@ import Quiz from './question/Quiz';
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
       {/* <Quiz /> */}
-      {/* <Test /> */}
+      <Test />
     </div>
   );
 }
