@@ -1,5 +1,5 @@
 import './App.css';
-import Home from './components/Home';
+import Home from './Home';
 import Test from './components/Test';
 import Quiz from './question/Quiz';
 
