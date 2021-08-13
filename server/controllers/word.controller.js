@@ -16,15 +16,21 @@ module.exports.findAllItems = (req, res)=>{
         .catch(err => res.json(err));
 }
 
+module.exports.findAllQuestions = (req, res)=>{
+        Question.find({})
+        .then(items => res.json(items))
+        .catch(err => res.json(err));
+}
+
 module.exports.findById =(req, res)=>{
-  Words.findOne({_id: req.params.id})
+  Words.findOne({_id: req.params.id}).populate('Items')
         .then(word=> res.json(word))
         .catch(err => res.json(err));
 }
 
 module.exports.create = (req, res) =>{
-    const { picture} = req.body;
-    Words.create({ picture})
+    const { width,title,picture} = req.body;
+    Words.create({ width,title,picture})
         .then(word => res.json(word))
         .catch(err => res.status(400).json(err));
 }

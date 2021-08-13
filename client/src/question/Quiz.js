@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component , useEffect} from 'react';
 import '../index.css';
 import questionAPI from '../question';
 import QuestionBox from '../components/QuestionBox';
@@ -6,7 +6,7 @@ import Result from '../components/ResultBox';
 
 
 
- 
+
 class Quiz extends Component {
   constructor() {
     super();
@@ -16,6 +16,7 @@ class Quiz extends Component {
       responses: 0
     };
   }
+  
   
   // Function to get question from ./question
   getQuestions = () => {
@@ -50,7 +51,9 @@ class Quiz extends Component {
   }
 
 
+
   render() {
+    
     return (<div className="container">
       <div className="title">
         QuizOn

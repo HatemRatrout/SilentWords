@@ -2,6 +2,7 @@ const WordController = require("../controllers/word.controller");
 
 module.exports = app => {
   app.get("/words", WordController.findAll);
+  app.get("/questions", WordController.findAllQuestions);
   app.get("/items", WordController.findAllItems);
   app.get("/words/:id", WordController.findById);
   app.put("/words/update/:id", WordController.update);

@@ -3,7 +3,7 @@ import '../App.css';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
-const Home = () => {
+const Article = () => {
     const [quiz, setQuiz] = useState("");
   
         // useEffect(()=>{
@@ -50,4 +50,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Article
