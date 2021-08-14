@@ -24,13 +24,13 @@ module.exports.findAllQuestions = (req, res)=>{
 
 module.exports.findById =(req, res)=>{
   Words.findOne({_id: req.params.id}).populate('Items')
-        .then(word=> res.json(word))
+        .then(word=> res.json(word.Items))
         .catch(err => res.json(err));
 }
 
 module.exports.create = (req, res) =>{
-    const { width,title,picture} = req.body;
-    Words.create({ width,title,picture})
+    const { title,picture} = req.body;
+    Words.create({ title,picture})
         .then(word => res.json(word))
         .catch(err => res.status(400).json(err));
 }
@@ -45,11 +45,13 @@ module.exports.createQuestion = (req, res) =>{
 
 module.exports.createItem = (req, res) =>{
     const {picture} = req.body;
-    Item.create({picture})
+    Item.create({picture})                                                              
     .then( item => {
-        Words.findOneAndUpdate({'_id': req.params.id},{ 
-            $push:{ Items : item }
-         })
+        console.log(item)
+            Words.findOneAndUpdate({'_id': req.params.id},{ 
+                    $push:{ Items : item }
+                })
+                .then(res => console.log(res))
          res.json(item)
          .catch(err => res.status(400).json(err));  
     })

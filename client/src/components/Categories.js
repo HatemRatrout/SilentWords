@@ -19,7 +19,6 @@ function Index() {
       <AppAppBar />
       <ProductCategories />
     </React.Fragment> 
-
   );
 }
 

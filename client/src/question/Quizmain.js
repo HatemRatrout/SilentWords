@@ -64,8 +64,12 @@ const computeAnswer = (answer,correct) => {
         if (responses >= 5)
         {
             setState(state)
-            // navigate('/questions')
+            
         }
+        if (responses >= 4){
+            navigate(`/questions`)
+        }
+        
     };
 
 
@@ -98,30 +102,30 @@ const computeAnswer = (answer,correct) => {
                     computeAnswer(answer,question.correct)
                     setDisable(true)
                     // disabled={disable === i}
-                    
                 }}>{answer}</Button>
                 </>
                 
                 )
                 
             }
+            
             </>
             ))}
         
 
 
             {/* make it apper in another page the text under*/}
-            {
-                
-                responses === 5 
-          ? (<ResultBox score={state}
-            playAgain={playAgain} />) 
-          : null
-      }
-</div>
- 
 
-    
+
+
+            {
+                responses >= 5 
+                ? (<ResultBox score={state}
+                    playAgain={playAgain} />) 
+                    : null
+                }
+               
+</div>
         </div>
       
     )

@@ -15,11 +15,12 @@ function App() {
   return (
     <div className="App">
       <Router>
+            <Test path="/item/:id" />
             <Quizmain path="/questions"/>
-            <Home path="/home"/>
+            <Home path="/"/>
             <Categories path="/categories"/>
             <Article path="/article"/>
-            <ResultBox path="/quizResult"/>
+            <ResultBox path="/quizResult" />
         </Router>
     </div>
   );

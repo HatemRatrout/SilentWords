@@ -8,8 +8,6 @@ module.exports = app => {
   app.put("/words/update/:id", WordController.update);
   app.post("/words/new", WordController.create);
   app.post("/items/new/:id", WordController.createItem);
-
   app.post("/questions/new", WordController.createQuestion);
-  
   app.delete("/words/delete/:id", WordController.delete);
 };
