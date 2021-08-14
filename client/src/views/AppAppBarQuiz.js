@@ -44,39 +44,15 @@ function AppAppBar(props) {
      
         <Toolbar className={classes.toolbar}>
         <Link
-            variant="h6"
+            variant="h9"
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/home"
           >
-            <h3 >Silent Words</h3>
+            <h3 >Choose the correct answer of the following
+</h3>
       </Link>
-          <div className={classes.left}/>
           
-            <img src="https://cdn.discordapp.com/attachments/872468951760785411/875328784826515486/Silent_Words_Logo_1-removebg-preview.png" style={{width:'6%', marginLeft:'-14%'}}></img>
-          
-          <div className={classes.right}>
-          <Link
-              variant="h6"
-              underline="none"
-              color="white"
-              href="/categories"
-              className={clsx(classes.rightLink)}
-            >
-              {'Categories'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink)}
-              color="white"
-              
-              href="/article"
-            >
-              {'Articles'}
-            </Link>
-          </div>
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />

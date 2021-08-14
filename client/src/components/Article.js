@@ -3,27 +3,27 @@ import '../App.css';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
+import AppAppBar from '../views/AppAppBar';
+import withRoot from '../withRoot';
+
+
 const Article = () => {
-    const [quiz, setQuiz] = useState("");
-  
-        // useEffect(()=>{
-        //     axios.get('http://localhost:8000/words')
-        //         .then(res=>{setQuiz(res.data)});
-        // })
-  
-    
     return (
         <>
-        <div className="Logo">
-        <div style={{width:'50%' , border:"solid 5px black", marginLeft:"450px"}} className="back" >
+        <div style={{}} className="Logo">
+        <React.Fragment >
+      <AppAppBar/>
+    </React.Fragment> 
+        <div  style={{ marginTop:'30px',color:'white'}}>
+        <div style={{width:'60%' , border:"solid 3px black", marginLeft:"20%", color:'white', fontSize:'16px', padding:'15px'}} className="back">
  
             <header>
                 <br/>
                 <br/>  
-          <h2 style={{fontFamily:"Fantasy"}}>How to communicate with a Deaf person</h2>
+          <h1 style={{fontFamily:"Fantasy"}}>How to communicate with a Deaf person</h1>
           </header>
           <br/>
-          <div style={{fontFamily:"Comic Sans MS, Comic Sans, cursive",color:"black"}}>
+          <div style={{fontFamily:"Comic Sans MS, Comic Sans, cursive"}}>
           <p>Fortunately, you don’t need to know ASL in order to know how to communicate with a Deaf person. According to a tip sheet developed by the Rochester Institute of Technology, one of the country’s premiere learning institutions for the Deaf, there are five guidelines to remember when communicating with the Deaf.</p>
           <br/>
           <br/>
@@ -39,15 +39,15 @@ const Article = () => {
               <li>Use the beginning and ending of a conversation as an opportunity to make physical and visual contact with the Deaf person, especially if they have been using an interpreter during your conversation. Smile, shake hands, touch their arm (if appropriate) and make eye contact. </li>
           </ol>
           </div>
-            <Button variant="contained" color="primary" style={{margin:"20px 0 20px 0"}}>
-                Go to the Home
+            <Button href="/home" variant="contained" color="primary" style={{margin:"20px 0 20px 0"}} >
+                Go back to Homepage
             </Button>
-        
+        </div>
+        <br></br><br></br>
         </div>
         </div>
-
         </>
     )
 }
 
-export default Article
+export default withRoot(Article);

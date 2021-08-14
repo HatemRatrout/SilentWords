@@ -38,56 +38,56 @@ const qBank = [
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 2?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "092299"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 3?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "099099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app4 ?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "222099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 5?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "2222099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 6?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "09922099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 7?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "222292099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app 8?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "0998999099"
     },
     {
       question:
-        "how build the app ?",
+        "how build the app9 ?",
       answers: ["vinayak", "sarthak", "somil", "devesh"],
       correct: "vinayak",
       questionId: "099099"

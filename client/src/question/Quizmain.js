@@ -1,12 +1,25 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import ResultBox from '../components/ResultBox';
+import AppAppBarQuiz from '../views/AppAppBarQuiz';
+import AppAppBar from '../views/AppAppBar';
+import withRoot from '../withRoot';
+import { navigate } from '@reach/router'
+import Button from '@material-ui/core/Button';
+import { Router } from '@reach/router';
+import { Link } from '@reach/router';
+import '../App.css';
+//import '../quizzz.css';
 
 const Quizmain = () => {
     const [allQuestions, setAllQuestions] = useState([]);
     const [state, setState] = useState(0);
     const [answer, setAnswer] = useState([]);
+    const [disable, setDisable] = useState(false);
+
+
     const [responses, setResponses] = useState(0);
+    const [flag, setFlag] = React.useState(true);
     
     useEffect(() => {
         axios.get("http://localhost:8000/questions")
@@ -45,40 +58,73 @@ const computeAnswer = (answer,correct) => {
         }
         if (responses < 5){
             setResponses(responses + 1 )
+            
             // navigate(`ResultBox`);
-        };  
+        }
+        if (responses >= 5)
+        {
+            setState(state)
+            // navigate('/questions')
+        }
     };
 
 
     return (
 
         <div>
-        {allQuestions.map((question, index) => (
+            
+            <React.Fragment >
+      <AppAppBar/>
+    </React.Fragment>
+    <div class="login-div">
+    <React.Fragment >
+      <AppAppBarQuiz/>
+    </React.Fragment>
+    {allQuestions.map((question, index) => (
             <>
             <div/>
-            <img src={question.question} alt="Logo" />
+            
+            <div >
+            <img src={question.question} alt="question" style={{border: '1px solid red'}}/>
+            </div>
+            
+            <br></br>
             {
                 question.answers.map((answer,i) =>
                 <>
-                <button onClick={()=> {
+                
+                <Button  variant="contained" color="primary" style={{margin:"20px 20px 20px 0", marginBottom:'100px', backgroundColor: '#28282a'}} onClick={()=> {
+                    setFlag(!flag);
                     computeAnswer(answer,question.correct)
-                }}>{answer}</button>
+                    setDisable(true)
+                    // disabled={disable === i}
+                    
+                }}>{answer}</Button>
                 </>
+                
                 )
+                
             }
-            
             </>
             ))}
+        
+
+
             {/* make it apper in another page the text under*/}
             {
-                responses === 5
+                
+                responses === 5 
           ? (<ResultBox score={state}
-            playAgain={playAgain}/>)
+            playAgain={playAgain} />) 
           : null
       }
-        </div>
+</div>
+ 
 
+    
+        </div>
+      
     )
 }
 
-export default Quizmain
+export default withRoot(Quizmain);

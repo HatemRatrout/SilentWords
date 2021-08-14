@@ -1,19 +1,26 @@
+import withRoot from '../withRoot';
+
 import React from 'react';
-import '../App.css';
-import Button from '@material-ui/core/Button';
+import ProductCategories from '../views/ProductCategories';
+import ProductSmokingHero from '../views/ProductSmokingHero';
+import AppFooter from '../views/AppFooter';
+import ProductHero from '../views/ProductHero';
+import ProductValues from '../views/ProductValues';
+import ProductHowItWorks from '../views/ProductHowItWorks';
+import ProductCTA from '../views/ProductCTA';
+import AppAppBar from '../views/AppAppBar';
 
+function Index() {
+  return (
 
-const Home = () => {
+    //Categories
     
-    
-    return (
-        <>
-            <div>
-                
-            </div>
+    <React.Fragment>
+      <AppAppBar />
+      <ProductCategories />
+    </React.Fragment> 
 
-        </>
-    )
+  );
 }
 
-export default Home
+export default withRoot(Index);
