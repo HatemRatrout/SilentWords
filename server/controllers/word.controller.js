@@ -29,8 +29,8 @@ module.exports.findById =(req, res)=>{
 }
 
 module.exports.create = (req, res) =>{
-    const { title,picture} = req.body;
-    Words.create({ title,picture})
+    const {link, url,title,width} = req.body;
+    Words.create({link,url, title,width})
         .then(word => res.json(word))
         .catch(err => res.status(400).json(err));
 }

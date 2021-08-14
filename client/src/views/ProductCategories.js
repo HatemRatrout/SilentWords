@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios'
+import React,{useEffect,useState} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
@@ -85,46 +86,18 @@ const styles = (theme) => ({
 
 function ProductCategories(props) {
   const { classes } = props;
+  
+  const [category, setCategories] = useState([])
+  
+  useEffect(() => {  
+    axios.get("http://localhost:8000/words" )
+    .then(res=>{setCategories(res.data)
+      console.log(res.data)
+    })
+    .catch(err=>console.log(err))
+  }, [])
 
-  const images = [
-    {
-      url:
-        'https://www.bkacontent.com/wp-content/uploads/2020/10/Depositphotos_21701883_l-2015-1024x441.jpg',
-      title: 'Numbers',
-      width: '40%',
-    },
-    {
-      url:
-        'https://previews.123rf.com/images/anastasiiaku/anastasiiaku1205/anastasiiaku120500026/13576896-funky-alphabet-with-textures-on-letters.jpg',
-      title: 'Letters',
-      width: '20%',
-    },
-    {
-      url:
-        'https://www.wrike.com/blog/content/uploads/2019/04/The-Best-Calendar-Tools-for-Every-Project-Management-Need-1.jpg',
-      title: 'Days',
-      width: '40%',
-    },
-    {
-      url:
-        'https://i.ytimg.com/vi/rMVA87H6BY0/maxresdefault.jpg',
-      title: 'Emotions',
-      width: '38%',
-    },
-    {
-      url:
-        'https://www.state.gov/wp-content/uploads/2019/04/shutterstock_1191163906-2560x852.jpg',
-      title: 'Emergency',
-      width: '38%',
-    },
-    {
-      url:
-        'https://bloximages.chicago2.vip.townnews.com/heraldextra.com/content/tncms/assets/v3/editorial/8/ff/8ffc7aed-92e5-5b5e-8677-7e5074f94c9d/5e4ef74ec1b06.image.jpg?crop=1203%2C1203%2C0%2C0&resize=1203%2C1203&order=crop%2Cresize',
-      title: 'Animals',
-      width: '24%',
-    },
-    
-  ];
+
 
   return (
     <Container className={classes.root} component="section">
@@ -132,8 +105,8 @@ function ProductCategories(props) {
         Categories
       </Typography>
       <div className={classes.images}>
-        {images.map((image) => (
-          <ButtonBase
+        {category.map((image) => (
+          <ButtonBase href={image.link}
             key={image.title}
             className={classes.imageWrapper}
             style={{
