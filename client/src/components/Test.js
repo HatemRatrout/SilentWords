@@ -1,5 +1,10 @@
 import React,{useState , useEffect} from 'react'
 import axios from 'axios'
+import AppAppBar from '../views/AppAppBar';
+import withRoot from '../withRoot';
+import Button from '@material-ui/core/Button';
+
+
 const Test = ({id}) => {
     const [items,setItems] = useState([]);
     const [rerender, setRerender] = useState(false);
@@ -25,4 +30,4 @@ const Test = ({id}) => {
     )
 }
 
-export default Test
+export default withRoot(Test);

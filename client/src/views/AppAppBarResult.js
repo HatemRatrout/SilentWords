@@ -48,7 +48,7 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/home"
+            href="/"
             style={{marginLeft:"315px"}}
           >
             <h3 >Silent Words</h3>

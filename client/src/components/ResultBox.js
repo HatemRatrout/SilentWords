@@ -17,8 +17,8 @@ const ResultBox = (props) => {
        <React.Fragment >
       <AppAppBarResult/>
     </React.Fragment>
-        <div>
-          <div style={{fontSize:'24px', color:"white"}}> Your score is {score} / 5 correct answer ! ! ! </div>
+    <div>
+          <div style={{fontSize:'24px', color:"black"}}> Your score is {score} / 5 correct answer ! ! ! </div>
           <Button className="playBtn" onClick={playAgain} href="/questions" color="primary" variant="contained" style={{marginTop:'45px'}}> Retake </Button>
         </div>    
     </div>

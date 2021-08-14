@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
+import { Link } from '@reach/router';
 
 const styles = (theme) => ({
   root: {
@@ -32,16 +33,17 @@ function ProductSmokingHero(props) {
   const { classes } = props;
 
   return (
-    <Container className={classes.root} component="section">
-      <Button className={classes.button}>
+    <Container className={classes.root} component="section" >
+      <Button className={classes.button} href="/questions" >
         <Typography variant="h4" component="span">
-          Got any questions? Need help?
+          Test Yourself NOW!
         </Typography>
       </Button>
-      <Typography variant="subtitle1" className={classes.link}>
-        We are here to help. Get in touch!
+     
+      <Typography variant="subtitle1" className={classes.link} >
+        Take a quick quiz..
       </Typography>
-      <img src="/static/themes/onepirate/producBuoy.svg" className={classes.buoy} alt="buoy" />
+      
     </Container>
   );
 }

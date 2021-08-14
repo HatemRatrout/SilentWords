@@ -39,7 +39,7 @@ const Article = () => {
               <li>Use the beginning and ending of a conversation as an opportunity to make physical and visual contact with the Deaf person, especially if they have been using an interpreter during your conversation. Smile, shake hands, touch their arm (if appropriate) and make eye contact. </li>
           </ol>
           </div>
-            <Button href="/home" variant="contained" color="primary" style={{margin:"20px 0 20px 0"}} >
+            <Button href="/" variant="contained" color="primary" style={{margin:"20px 0 20px 0"}} >
                 Go back to Homepage
             </Button>
         </div>

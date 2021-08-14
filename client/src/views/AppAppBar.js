@@ -48,14 +48,14 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/home"
+            href="/"
           >
             <h3 >Silent Words</h3>
       </Link>
           <div className={classes.left}/>
-          
-            <img src="https://cdn.discordapp.com/attachments/872468951760785411/875328784826515486/Silent_Words_Logo_1-removebg-preview.png" style={{width:'6%', marginLeft:'-14%'}}></img>
-          
+          <Link href="/">
+            <img src="https://cdn.discordapp.com/attachments/872468951760785411/875328784826515486/Silent_Words_Logo_1-removebg-preview.png" style={{width:'10%', marginLeft:'-36%'}}></img>
+            </Link>
           <div className={classes.right}>
           <Link
               variant="h6"

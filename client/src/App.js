@@ -20,7 +20,7 @@ function App() {
             <Home path="/"/>
             <Categories path="/categories"/>
             <Article path="/article"/>
-            <ResultBox path="/quizResult" />
+            <ResultBox path="/quizResult/:score"/>
         </Router>
     </div>
   );

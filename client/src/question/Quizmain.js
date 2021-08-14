@@ -17,7 +17,6 @@ const Quizmain = () => {
     const [answer, setAnswer] = useState([]);
     const [disable, setDisable] = useState(false);
 
-
     const [responses, setResponses] = useState(0);
     const [flag, setFlag] = React.useState(true);
     
@@ -39,7 +38,6 @@ const Quizmain = () => {
             console.log(res.data)
         for(var i=0 ; i<res.data.length ; i++){
             setAnswer(res.data[i].answers);
-
         }
         })
 }, [])
@@ -58,20 +56,18 @@ const computeAnswer = (answer,correct) => {
         }
         if (responses < 5){
             setResponses(responses + 1 )
+
             
             // navigate(`ResultBox`);
         }
         if (responses >= 5)
         {
             setState(state)
-            
+            // navigate('/questions')
         }
-        if (responses >= 4){
-            navigate(`/questions`)
-        }
-        
     };
 
+    console.log("Thia ia "+state)
 
     return (
 
@@ -85,11 +81,11 @@ const computeAnswer = (answer,correct) => {
       <AppAppBarQuiz/>
     </React.Fragment>
     {allQuestions.map((question, index) => (
-            <>
-            <div/>
+            <div key={index}>
             
-            <div >
-            <img src={question.question} alt="question" style={{border: '1px solid red'}}/>
+            
+            <div>
+            <img src={question.question} alt="question"/>
             </div>
             
             <br></br>
@@ -97,35 +93,36 @@ const computeAnswer = (answer,correct) => {
                 question.answers.map((answer,i) =>
                 <>
                 
-                <Button  variant="contained" color="primary" style={{margin:"20px 20px 20px 0", marginBottom:'100px', backgroundColor: '#28282a'}} onClick={()=> {
+                <input type="radio"  variant="contained" color="primary" style={{margin:"20px 20px 20px 0", marginBottom:'100px', backgroundColor: '#28282a'}} onClick={()=> {
                     setFlag(!flag);
                     computeAnswer(answer,question.correct)
-                    setDisable(true)
-                    // disabled={disable === i}
-                }}>{answer}</Button>
+                    
+                }}/> <label >{answer}</label>
                 </>
                 
                 )
                 
             }
-            
-            </>
+            </div>
             ))}
         
-
+        <Button variant="contained" color="secondary" onClick={()=> {
+                navigate('/quizResult/'+state)
+            }}>Submit</Button>
 
             {/* make it apper in another page the text under*/}
-
-
-
             {
-                responses >= 5 
-                ? (<ResultBox score={state}
-                    playAgain={playAgain} />) 
-                    : null
-                }
-               
+            
+
+        //         responses === 5 
+        //   ? (<ResultBox score={state}
+        //     playAgain={playAgain} />) 
+        //   : null
+      }
 </div>
+ 
+
+    
         </div>
       
     )
