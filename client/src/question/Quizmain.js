@@ -85,7 +85,7 @@ const computeAnswer = (answer,correct) => {
             
             
             <div>
-            <img src={question.question} alt="question"/>
+            <img src={question.question} alt="question" style={{width:'400px', height:'230px'}}/>
             </div>
             
             <br></br>
@@ -93,11 +93,11 @@ const computeAnswer = (answer,correct) => {
                 question.answers.map((answer,i) =>
                 <>
                 
-                <input type="radio"  variant="contained" color="primary" style={{margin:"20px 20px 20px 0", marginBottom:'100px', backgroundColor: '#28282a'}} onClick={()=> {
+                <input type="radio" variant="contained" color="primary" style={{margin:"20px 5px 60px 0", marginBottom:'100px', backgroundColor: '#28282a'}} onClick={()=> {
                     setFlag(!flag);
                     computeAnswer(answer,question.correct)
                     
-                }}/> <label >{answer}</label>
+                }}/> <label style={{marginRight:'30px'}}>{answer}</label>
                 </>
                 
                 )

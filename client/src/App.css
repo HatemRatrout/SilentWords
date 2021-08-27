@@ -31,6 +31,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.image {
+  border-radius: 8px;
+    height: 180px; 
+    width: 350px;
+    margin: 30px;
+    margin-bottom: 30px;
+    border: 5px solid #ddd;
+}
 
 .App-link {
   color: #61dafb;

@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+import Link  from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
+import {
+  navigate
+} from "@reach/router";
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 
@@ -34,6 +38,15 @@ const styles = (theme) => ({
     color: theme.palette.secondary.main,
   },
 });
+const navHandler = (e) =>{
+  e.preventDefault();
+  navigate('/article');
+}
+const catHandler = (e) =>{
+  e.preventDefault();
+  navigate('/categories');
+}
+
 
 function AppAppBar(props) {
   const { classes } = props;
@@ -57,25 +70,24 @@ function AppAppBar(props) {
             <img src="https://cdn.discordapp.com/attachments/872468951760785411/875328784826515486/Silent_Words_Logo_1-removebg-preview.png" style={{width:'10%', marginLeft:'-36%'}}></img>
             </Link>
           <div className={classes.right}>
-          <Link
+          <Button
               variant="h6"
               underline="none"
-              color="white"
-              href="/categories"
               className={clsx(classes.rightLink)}
+              color="white"
+              onClick={(e) => catHandler(e)}
             >
               {'Categories'}
-            </Link>
-            <Link
+            </Button>
+            <Button
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink)}
               color="white"
-              
-              href="/article"
+              onClick={(e) => navHandler(e)}
             >
               {'Articles'}
-            </Link>
+            </Button>
           </div>
         </Toolbar>
       </AppBar>

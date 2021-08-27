@@ -32,6 +32,7 @@ module.exports.create = (req, res) =>{
     const {link, url,title,width} = req.body;
     Words.create({link,url, title,width})
         .then(word => res.json(word))
+        console.log(word)
         .catch(err => res.status(400).json(err));
 }
 

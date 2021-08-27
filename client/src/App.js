@@ -8,7 +8,8 @@ import Quiztest from './question/Quiztest';
 import ResultBox from './components/ResultBox';
 import Categories from './components/Categories';
 import { Router } from '@reach/router';
-
+import CreateRoom from './components/vedio/CreateRoom';
+import Room from './components/vedio/Video';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
             <Categories path="/categories"/>
             <Article path="/article"/>
             <ResultBox path="/quizResult/:score"/>
+            <CreateRoom path="/chat" />
+            <Room path="/room/:roomID" />
         </Router>
     </div>
   );

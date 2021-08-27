@@ -52,15 +52,14 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues1.svg"
+                src="https://static.thenounproject.com/png/2337-200.png"
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+              Learn Sign Language
               </Typography>
               <Typography variant="h5">
-                {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                {', go for a mini-vacation just a few subway stops away from your home.'}
+                {'Learn sign language online with 200+ vocabulary words in many categories you will use right away, all for FREE.'}
               </Typography>
             </div>
           </Grid>
@@ -68,15 +67,15 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues2.svg"
+                src="https://cdn.iconscout.com/icon/premium/png-512-thumb/video-call-5-504293.png"
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
-                New experiences
+              Video and text chat
               </Typography>
               <Typography variant="h5">
-                {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
-                {'your Sundays will not be alike.'}
+                {'Meet people online and talk to them in sign language ..or ask about any difficulties you face in learning '}
+                
               </Typography>
             </div>
           </Grid>
@@ -84,15 +83,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues3.svg"
-                alt="clock"
+                src="https://static.thenounproject.com/png/1986856-200.png"
               />
               <Typography variant="h6" className={classes.title}>
-                Exclusive rates
+              Articles
               </Typography>
               <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {'Read articles that talk about sign language or how to deal with deaf people and many more.. '}
               </Typography>
             </div>
           </Grid>

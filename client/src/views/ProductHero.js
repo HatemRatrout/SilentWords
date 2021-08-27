@@ -40,7 +40,7 @@ function ProductHero(props) {
       Learn Sign Language Online
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-      200+ vocabulary words you'll use right away, all for FREE.
+      Meet people online and talk to them in sign language..<br></br> or ask about any difficulties you face in learning.
       
       </Typography>
       <Button
@@ -49,7 +49,7 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/categories"
+        href="/chat"
       >
         Start Now!
       </Button>

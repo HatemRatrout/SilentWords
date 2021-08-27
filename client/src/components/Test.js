@@ -3,7 +3,7 @@ import axios from 'axios'
 import AppAppBar from '../views/AppAppBar';
 import withRoot from '../withRoot';
 import Button from '@material-ui/core/Button';
-
+import '../App.css';
 
 const Test = ({id}) => {
     const [items,setItems] = useState([]);
@@ -21,9 +21,12 @@ const Test = ({id}) => {
     },[id])
 
     return (
-        <div>
+        <div style={{backgroundImage: 'url(https://i.redd.it/qwd83nc4xxf41.jpg)'}}>
+            <React.Fragment >
+      <AppAppBar/>
+    </React.Fragment> 
             {rerender && items.map((text, index) => (
-            <img src={text.picture} alt="Logo" />
+            <img className="image" src={text.picture} alt="Logo" />
             ))}
 
         </div>

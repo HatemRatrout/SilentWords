@@ -20,6 +20,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.13.6"
+    "http": "0.0.1-security",
+    "mongoose": "^5.13.6",
+    "socket.io": "^4.1.3"
   }
 }
