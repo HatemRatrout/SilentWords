@@ -3,6 +3,11 @@
 Sign language is one of the oldest means of communication between humans, and it is one of the languages that must be widely taken care of in order to facilitate communication with deaf and mute people.  <br> Sign language is not limited to the movement of the hands, it includes facial expressions, the movement of the lips and expressions with the movement of the body.
 Hence the idea of our site, which aims to teach sign language in the simplest way, which is the **hint:** through the use of hand movements with the use of the language of the lips, and this method of education for the deaf and mute is one of the means that helps to strengthen their spoken language.
 
+## Run
+You have to use two terminals at the same time:
+- On the client side use ``` npm run start ```.
+- On the server side use ``` nodemon server.js ``` Navigate to ```http://localhost:3000/```.
+
 ### Main page
 <img width="1343" alt="Screen Shot 2021-08-27 at 3 08 43 PM" src="https://user-images.githubusercontent.com/76398557/131125383-e87b3925-c5f1-463f-87c9-c2e0f0ae729f.png">
 <img width="1343" alt="Screen Shot 2021-08-27 at 3 09 03 PM" src="https://user-images.githubusercontent.com/76398557/131125581-0d9d92f4-83f4-4f61-ad92-8e7307ca18fd.png">
@@ -47,7 +52,9 @@ Read articles that talk about sign language or how to deal with deaf people and 
 - React
 - Node.js
 - Material UI
-<img width="600" alt=" " src="https://user-images.githubusercontent.com/76398557/131138283-8bb0f392-265a-4ffb-9116-586928857da5.jpg">
+- Reach Router
+- socket.io  
+<img width="400" src="https://user-images.githubusercontent.com/76398557/131228425-f6c19c96-da3c-4299-b6de-75c52dbc28b7.png">
 
 &nbsp; <br>  
 
